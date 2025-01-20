@@ -20,8 +20,8 @@ product_data['Category'] = product_data['Category'].str.lower()
 
 
 # Initialize NLPCloud Clients
-summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "3b4fe4d06f3b1ef2754d8b8afdc51661e3decdf5", gpu=True)
-sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "3b4fe4d06f3b1ef2754d8b8afdc51661e3decdf5", gpu=False)
+summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "e1f5c736b9a66081b19defb96e925266c5ff5652", gpu=True)
+sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "e1f5c736b9a66081b19defb96e925266c5ff5652", gpu=False)
 
 
 # Streamlit app code
