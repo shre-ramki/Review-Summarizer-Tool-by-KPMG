@@ -3,14 +3,14 @@ import pandas as pd
 import nlpcloud
 
 # Streamlit page config
-st.set_page_config(page_title="Multipage App", page_icon="👋")
+st.set_page_config(page_title="Review Sumamrizer")
 
 # Sidebar for navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.selectbox("Select a page", ("first", "Dashboard"))
+page = st.sidebar.selectbox("Select a page", ("Home", "Dashboard"))
 
 # Streamlit app content based on page selection
-if page == "first":
+if page == "Home":
     # Main content of first.py
     st.title("Product Reviews Search App")
 
