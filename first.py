@@ -10,7 +10,7 @@ st.sidebar.title("Navigation")
 page = st.sidebar.selectbox("Select a page", ("first", "Dashboard"))
 
 # Streamlit app content based on page selection
-if page == "Home":
+if page == "first":
     # Main content of first.py
     st.title("Product Reviews Search App")
 
