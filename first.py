@@ -13,7 +13,7 @@ st.sidebar.success("Select a page above.")
 
 
 
-product_data = pd.read_csv(r'C:\Users\shiva\OneDrive\Desktop\kpmg\Cleaned_Reviews.csv')
+product_data = pd.read_csv(r'Cleaned_Reviews.csv')
 
 product_data['Brand'] = product_data['Brand'].str.lower()
 product_data['Category'] = product_data['Category'].str.lower()
