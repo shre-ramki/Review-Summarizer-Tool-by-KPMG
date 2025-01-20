@@ -20,8 +20,8 @@ if page == "first":
     product_data['Category'] = product_data['Category'].str.lower()
 
     # Initialize NLPCloud Clients (API key should ideally be in secrets.toml)
-    summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "your_api_key_here", gpu=True)
-    sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "your_api_key_here", gpu=False)
+    summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "8ec9bd4fcdf12ce506cd492e465c8bbed756e240", gpu=True)
+    sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "8ec9bd4fcdf12ce506cd492e465c8bbed756e240", gpu=False)
 
     # Search functionality
     search_term = st.text_input("Search for a Brand or Category", "").lower()
