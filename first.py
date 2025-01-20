@@ -13,15 +13,15 @@ st.sidebar.success("Select a page above.")
 
 
 
-product_data = pd.read_csv(r'Cleaned_Reviews.csv')
+product_data = pd.read_csv(r'C:\Users\shiva\OneDrive\Desktop\kpmg\Cleaned_Reviews.csv')
 
 product_data['Brand'] = product_data['Brand'].str.lower()
 product_data['Category'] = product_data['Category'].str.lower()
 
 
 # Initialize NLPCloud Clients
-summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "a2afe2a86b0ef0bb954852123e504b8a1c072133", gpu=True)
-sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "a2afe2a86b0ef0bb954852123e504b8a1c072133", gpu=False)
+summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "3b4fe4d06f3b1ef2754d8b8afdc51661e3decdf5", gpu=True)
+sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "3b4fe4d06f3b1ef2754d8b8afdc51661e3decdf5", gpu=False)
 
 
 # Streamlit app code
