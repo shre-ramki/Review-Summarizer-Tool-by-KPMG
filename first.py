@@ -55,7 +55,7 @@ if page == "Home":
                     st.write(summary)
 
                     sentiment_response = sentiment_client.sentiment(summary)['scored_labels']
-                    sentiment_analysis = [(item['label'], round(item['score'], 4)) for item in sentiment_response]
+                    sentiment_analysis = [(item['label'], round(item['score']*100, 4)) for item in sentiment_response]
                     st.write(f"Sentiment Analysis for {selected_product}:")
                     for sentiment in sentiment_analysis:
                         st.write(f"{sentiment[0]}: {sentiment[1]}")
