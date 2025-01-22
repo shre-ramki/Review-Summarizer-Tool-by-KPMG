@@ -41,7 +41,8 @@ if page == "Home":
                 product_reviews = filtered_data[filtered_data['Brand'] == selected_product]['Reviews'].dropna().tolist()
                 reviews_text = " ".join(product_reviews)
                 overall_rating = product_reviews[0]
-                 st.write(f" Overall rating for the product {selected_product} is : {overall_rating}")
+                st.write(f" Overall rating for the product {selected_product} is : {overall_rating}")
+                
                 if reviews_text:
                     summary = summarization_client.summarization(reviews_text, size="small")['summary_text']
                     st.write(f"Summary of Reviews for {selected_product}:")
