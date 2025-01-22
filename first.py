@@ -40,8 +40,14 @@ if page == "Home":
             if selected_product:
                 product_reviews = filtered_data[filtered_data['Brand'] == selected_product]['Reviews'].dropna().tolist()
                 reviews_text = " ".join(product_reviews)
-                overall_rating = filtered_data[filtered_data['Brand'] == selected_product]['Rating']
-                st.write(f" Overall rating for the product {selected_product} is : {overall_rating}")
+                filtered_select_product = filtered_data[filtered_data['Brand'] == selected_product]
+
+                if not filtered_product.empty:
+                    overall_rating = filtered_select_product.iloc[0]['Rating']
+                    st.write(f"Overall rating for the product {selected_product} is: {overall_rating}")
+                else:
+                    st.write(f"No product found for the selected brand: {selected_product}")
+
                 
                 if reviews_text:
                     summary = summarization_client.summarization(reviews_text, size="small")['summary_text']
