@@ -42,7 +42,7 @@ if page == "Home":
                 reviews_text = " ".join(product_reviews)
                 filtered_select_product = filtered_data[filtered_data['Brand'] == selected_product]
 
-                if not filtered_product.empty:
+                if not filtered_select_product.empty:
                     overall_rating = filtered_select_product.iloc[0]['Rating']
                     st.write(f"Overall rating for the product {selected_product} is: {overall_rating}")
                 else:
