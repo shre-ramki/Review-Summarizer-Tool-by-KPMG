@@ -40,7 +40,7 @@ if page == "Home":
             if selected_product:
                 product_reviews = filtered_data[filtered_data['Brand'] == selected_product]['Reviews'].dropna().tolist()
                 reviews_text = " ".join(product_reviews)
-                overall_rating = filtered_data[filtered_data['Brand'] == selected_product]['Rating'][0]
+                overall_rating = filtered_data[filtered_data['Brand'] == selected_product]['Rating']
                 st.write(f" Overall rating for the product {selected_product} is : {overall_rating}")
                 
                 if reviews_text:
