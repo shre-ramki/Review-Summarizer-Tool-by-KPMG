@@ -34,12 +34,14 @@ if page == "Home":
             st.write(f"Showing results for: {search_term}")
             filtered_display = filtered_data[['Brand', 'Category', 'Reviews', 'Price']]
             st.write(filtered_display)
+            
 
             selected_product = st.selectbox("Select a product to analyze", filtered_display['Brand'].unique())
             if selected_product:
                 product_reviews = filtered_data[filtered_data['Brand'] == selected_product]['Reviews'].dropna().tolist()
                 reviews_text = " ".join(product_reviews)
-
+                overall_rating = product_reviews[0]
+                 st.write(f" Overall rating for the product {selected_product} is : {overall_rating}")
                 if reviews_text:
                     summary = summarization_client.summarization(reviews_text, size="small")['summary_text']
                     st.write(f"Summary of Reviews for {selected_product}:")
