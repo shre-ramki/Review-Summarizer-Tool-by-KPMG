@@ -21,7 +21,7 @@ if page == "Home":
 
     # Initialize NLPCloud Clients (API key should ideally be in secrets.toml)
     summarization_client = nlpcloud.Client("finetuned-llama-3-70b", "57af9403735882a74fe2ccfd35b210e7dade96e0", gpu=True)
-    sentiment_client = nlpcloud.Client("distilbert-base-uncased-emotion", "57af9403735882a74fe2ccfd35b210e7dade96e0", gpu=False)
+    sentiment_client = nlpcloud.Client("distilbert-base-uncased-finetuned-sst-2-english", "57af9403735882a74fe2ccfd35b210e7dade96e0", gpu=False)
 
     # Search functionality
     search_term = st.text_input("Search for a Brand or Category", "").lower()
