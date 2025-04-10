@@ -12,7 +12,7 @@ page = st.sidebar.selectbox("Select a page", ("Home", "Dashboard"))
 # Streamlit app content based on page selection
 if page == "Home":
     # Main content of first.py
-    st.title("Product Reviews Search App")
+    st.title("Product Review Summarizer")
 
     # Loading product data
     product_data = pd.read_csv('Cleaned_Reviews.csv')
