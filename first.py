@@ -37,9 +37,9 @@ if page == "Home":
     #                               (filtered_data['Category'].str.contains(search_term))]
 
     if not filtered_data.empty:
-        st.write(f"Showing results in category: {selected_category}")
-        filtered_display = filtered_data[['Brand', 'Category', 'Reviews', 'Price']]
-        st.write(filtered_display)
+        # st.write(f"Showing results in category: {selected_category}")
+        # filtered_display = filtered_data[['Brand', 'Category', 'Reviews', 'Price']]
+        # st.write(filtered_display)
 
         selected_product = st.selectbox("Select a product to analyze", filtered_display['Brand'].unique())
         if selected_product:
